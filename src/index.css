@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 30 50% 98%;
+    --foreground: 340 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 30% 15%;
+
+    --primary: 340 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 90% 70%;
+    --secondary-foreground: 340 30% 15%;
+
+    --muted: 30 30% 94%;
+    --muted-foreground: 340 20% 40%;
+
+    --accent: 45 100% 85%;
+    --accent-foreground: 340 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 20% 88%;
+    --input: 340 20% 88%;
+    --ring: 340 70% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --pink-soft: 340 60% 95%;
+    --pink-light: 340 70% 85%;
+    --pink-medium: 340 70% 65%;
+    --pink-dark: 340 70% 45%;
+    
+    --yellow-soft: 45 100% 95%;
+    --yellow-light: 45 100% 85%;
+    --yellow-medium: 45 90% 60%;
+    
+    --cream: 40 40% 96%;
+    --warm-white: 30 50% 99%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(340 60% 95%) 0%, hsl(45 100% 95%) 50%, hsl(340 60% 95%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(340 60% 98%) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(340 70% 60%) 0%, hsl(340 80% 50%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(45 100% 70%) 0%, hsl(45 90% 60%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(340 30% 50% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(340 30% 50% / 0.12);
+    --shadow-hover: 0 12px 40px -8px hsl(340 30% 50% / 0.2);
+
+    /* Fonts */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 340 30% 8%;
+    --foreground: 30 50% 95%;
+
+    --card: 340 30% 12%;
+    --card-foreground: 30 50% 95%;
+
+    --popover: 340 30% 12%;
+    --popover-foreground: 30 50% 95%;
+
+    --primary: 340 70% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 70% 50%;
+    --secondary-foreground: 340 30% 10%;
+
+    --muted: 340 30% 18%;
+    --muted-foreground: 340 20% 65%;
+
+    --accent: 45 80% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 30% 20%;
+    --input: 340 30% 20%;
+    --ring: 340 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .bg-gradient-button {
+    background: var(--gradient-button);
+  }
+
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer components {
+  .product-card {
+    @apply bg-card rounded-2xl overflow-hidden transition-all duration-300 shadow-card;
+  }
+
+  .product-card:hover {
+    @apply shadow-hover -translate-y-1;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-button text-primary-foreground font-medium px-6 py-3 rounded-full transition-all duration-300 hover:shadow-hover hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground font-medium px-6 py-3 rounded-full transition-all duration-300 hover:shadow-soft;
+  }
+
+  .btn-whatsapp {
+    @apply bg-[#25D366] text-white font-medium px-6 py-3 rounded-full transition-all duration-300 hover:bg-[#20BA5A] hover:shadow-hover;
+  }
+
+  .category-tab {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+  }
+
+  .category-tab-active {
+    @apply bg-primary text-primary-foreground shadow-soft;
+  }
+
+  .category-tab-inactive {
+    @apply bg-muted text-muted-foreground hover:bg-accent;
+  }
+}
