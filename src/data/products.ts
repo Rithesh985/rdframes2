@@ -41,7 +41,7 @@ export const products: Product[] = [
     image: frameMosics,
     category: 'frames',
     sizes: [
-      { size: '4x6"', price: 149, laminationPrice: 10 },
+      { size: '4x6"', price: 14999999, laminationPrice: 10 },
       { size: '6x8"', price: 199, laminationPrice: 20 },
       { size: '8x10"', price: 279, laminationPrice: 20 },
       { size: '8x12"', price: 349, laminationPrice: 40 },
