@@ -41,10 +41,6 @@ export const products: Product[] = [
     image: frameMosics,
     category: 'frames',
     sizes: [
-      { size: '4x6"', price: 149, laminationPrice: 10 },
-      { size: '6x8"', price: 199, laminationPrice: 20 },
-      { size: '8x10"', price: 279, laminationPrice: 20 },
-      { size: '8x12"', price: 349, laminationPrice: 40 },
       { size: '10x12"', price: 449, laminationPrice: 50 },
       { size: '12x15"', price: 559, laminationPrice: 60 },
       { size: '12x18"', price: 669, laminationPrice: 70 },
@@ -59,7 +55,8 @@ export const products: Product[] = [
     image: frameSecretEye,
     category: 'frames',
     sizes: [
-      { size: '4x6"', price: 199, laminationPrice: 10 },
+      { size: '4x4"', price: 149, laminationPrice: 10 },
+      { size: '4x6"', price: 199, laminationPrice: 1 },
       { size: '6x8"', price: 249, laminationPrice: 20 },
       { size: '8x10"', price: 349, laminationPrice: 20 },
       { size: '8x12"', price: 449, laminationPrice: 40 },
@@ -104,9 +101,7 @@ export const products: Product[] = [
     image: frameMini,
     category: 'frames',
     sizes: [
-      { size: 'Small (4 photos)', price: 599, laminationPrice: 40 },
-      { size: 'Medium (6 photos)', price: 799, laminationPrice: 60 },
-      { size: 'Large (9 photos)', price: 1099, laminationPrice: 90 },
+     { size: '4x4"', price: 149, laminationPrice: 10 },
     ],
   },
     {
@@ -116,9 +111,11 @@ export const products: Product[] = [
     image: frameBirthday,
     category: 'frames',
     sizes: [
-      { size: 'Small (4 photos)', price: 599, laminationPrice: 40 },
-      { size: 'Medium (6 photos)', price: 799, laminationPrice: 60 },
-      { size: 'Large (9 photos)', price: 1099, laminationPrice: 90 },
+      { size: '8x10"', price: 449, laminationPrice: 20 },
+      { size: '8x12"', price: 549, laminationPrice: 40 },
+      { size: '10x12"', price: 699, laminationPrice: 50 },
+      { size: '12x15"', price: 849, laminationPrice: 60 },
+      { size: '16x20"', price: 1699, laminationPrice: 90 },,
     ],
   },
   {
@@ -128,9 +125,11 @@ export const products: Product[] = [
     image: frameBestFriendContract,
     category: 'frames',
     sizes: [
-      { size: 'Small (4 photos)', price: 599, laminationPrice: 40 },
-      { size: 'Medium (6 photos)', price: 799, laminationPrice: 60 },
-      { size: 'Large (9 photos)', price: 1099, laminationPrice: 90 },
+   { size: '8x10"', price: 449, laminationPrice: 20 },
+      { size: '8x12"', price: 549, laminationPrice: 40 },
+      { size: '10x12"', price: 699, laminationPrice: 50 },
+      { size: '12x15"', price: 849, laminationPrice: 60 },
+      { size: '16x20"', price: 1699, laminationPrice: 90 },
     ],
   },
 
@@ -152,7 +151,7 @@ export const products: Product[] = [
     description: 'Transform your photos into memorable wallet cards',
     image: giftPremiumWalletCard,
     category: 'gifts',
-    basePrice: 1299,
+    basePrice: 199,
   },
   {
     id: 'gift-3',
@@ -176,7 +175,7 @@ export const products: Product[] = [
     description: 'A beautifully designed love contract to seal your bond forever',
     image: giftCustomDecorativePhotos,
     category: 'gifts',
-    basePrice: 599,
+    basePrice: 10,
   },
   {
     id: 'gift-6',
@@ -184,7 +183,7 @@ export const products: Product[] = [
     description: 'Special moments',
     image: giftPoloraid,
     category: 'gifts',
-    basePrice: 349,
+    basePrice: 199,
   },
   {
     id: 'gift-7',
@@ -192,7 +191,7 @@ export const products: Product[] = [
     description: 'Carry your loved ones everywhere!',
     image: giftWalletCard,
     category: 'gifts',
-    basePrice: 199,
+    basePrice: 149,
   },
   {
     id: 'gift-8',
@@ -200,7 +199,7 @@ export const products: Product[] = [
     description: 'Illuminate your room with your favorite memories',
     image: giftMagicMirror,
     category: 'gifts',
-    basePrice: 899,
+    basePrice: 799,
   },
   {
     id: 'gift-9',
@@ -208,7 +207,7 @@ export const products: Product[] = [
     description: 'Illuminate your room with your favorite memories',
     image: giftMagicMirrorBlack,
     category: 'gifts',
-    basePrice: 899,
+    basePrice: 599,
   },
 
 ];
